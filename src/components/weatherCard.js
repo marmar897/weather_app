@@ -18,6 +18,7 @@ class WeatherCard extends Component{
                 <p> High Tempurature: {this.props.weather.main.temp_max}</p>
                 <p>Low Tempurature: {this.props.weather.main.temp_min}</p>
                 <p>Weather condition: {this.props.weather.weather[0].main}</p>
+                
             </div>
         )
     }
