@@ -6,7 +6,7 @@ import React from "react";
 import { BrowserRouter, Route, Link, Routes} from 'react-router-dom';
 
 //importing components
-import WeatherCard from "./components/weatherCard";
+import WeatherCard from "./components/WeatherCard";
 import Homepage from "./components/Home";
 
 function App() {

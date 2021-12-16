@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import { BrowserRouter, Route, Link, Switch} from 'react-router-dom';
 // import axios from 'axios';
 
-import WeatherCard from './weatherCard';
+import WeatherCard from './WeatherCard';
 import SearchField from './SearchField';
 
 function Homepage(){
@@ -11,7 +11,7 @@ function Homepage(){
         <h1>Welcome To My Weather App</h1>
         <div >
             <SearchField/>
-            <WeatherCard/>
+             {/* <WeatherCard/>  */}
        </div>
        </div>
          

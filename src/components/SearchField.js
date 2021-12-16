@@ -1,15 +1,13 @@
 import React, { Component } from 'react';
-import { useEffect, useState } from "react";
+import WeatherCard from './WeatherCard';
 
 class SearchField extends Component{
     constructor(){
         super();
         this.state = {
             input: '',
-            found: '',
-            error: null,
-            isLoaded: false,
-            items: []
+            found: false,
+            weatherReport:{}           
         }
     }
 
@@ -20,23 +18,30 @@ class SearchField extends Component{
         fetch(`https://api.openweathermap.org/data/2.5/weather?q=${input}&appid=${apikey}`)
         // SEARCH+TERM+GOES+HERE&api_key=YOUR_API_KEY
           .then(res => res.json())
-          .then(city => console.log(city))
-        //   .catch(error => {
-        //             this.setState({found: false})
-        //            console.log("error: ", error)
-        //          });
+          .then(weatherReport => this.setState({ weatherReport: weatherReport, found:true}))
+         // .then(weather => console.log(weather))
+          .catch(error => {
+                    this.setState({found: false})
+                   console.log("error: ", error)
+                 });
     }
 
 
-
-
-
     render(){
-        return(
+        let weather;           
+        if(this.state.found){
+            weather = <WeatherCard weather={this.state.weatherReport}/>
+            console.log("its been found")
+        }
+        else{
+            weather = <h2> no city weather results</h2>
+        }
+
+        return(           
             <div className ="searchField" > 
             <input id= "submitId" placeholder="Input a City!" />
             <button onClick= {() => this.onInputChange(document.getElementById('submitId').value)}> Search </button>
-
+            {weather}
             </div>
         )
     }
