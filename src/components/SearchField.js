@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import WeatherCard from './WeatherCard';
+import {Link, Redirect } from "react-router-dom";
 
 class SearchField extends Component{
     constructor(){
@@ -38,18 +39,29 @@ class SearchField extends Component{
         // };
     }
 
+    handleClick = () => {
+
+    }
+
 
     render(){
-        // let err;
-        // if (err){
-        //    return(
-        //     <div> { err.message } </div>
-        //    ) 
-        // }
         let foundReport;           
         if(this.state.found){
             foundReport = <div> <WeatherCard weather={this.state.weatherReport}/>
-            <button> Click to see hourly weather!</button>
+             {/* <Redirect to={ {
+                 pathname: '/HourlyWeather',
+                 state: {this.state.weatherReport}
+                 <button>Click to see hourly weather!</button> 
+               }}  /> */}
+               {/* <button onClick={handleClick}>Click to see hourly weather!</button> */}
+               <Link 
+                    to = {{
+                        pathname: './HourlyWeather',
+                        state: {
+                            props: this.state.weatherReport}
+                    }}>
+                        <button>Checkout Hourly Weather in this City!</button>
+               </Link>
             </div>
             console.log("its been found")
         }
@@ -66,7 +78,6 @@ class SearchField extends Component{
             </div>
         )
     }
-
 }
 
 export default SearchField;

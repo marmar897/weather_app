@@ -16,9 +16,7 @@ function Homepage(){
             {/* <Container/> */}
              
        </div>
-       </div>
-         
+       </div>        
     );
-
 }
 export default Homepage;

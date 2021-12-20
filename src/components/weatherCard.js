@@ -19,7 +19,7 @@ class WeatherCard extends Component{
         return(
             <div className="weatherCard">
                 <p>City: {this.props.weather.name}</p>
-                <img src = {`http://openweathermap.org/img/w/${this.props.weather.weather[0].icon}.png`}/>
+                <img id ="icon" src = {`http://openweathermap.org/img/w/${this.props.weather.weather[0].icon}.png`}/>
                 <p>High Tempurature: {this.props.weather.main.temp_max}</p>
                 <p>Low Tempurature: {this.props.weather.main.temp_min}</p>
                 <p>Weather Currently: {this.props.weather.weather[0].main}</p>

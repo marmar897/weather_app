@@ -1,0 +1,70 @@
+body {
+    background-color: powderblue;
+    text-align: center;
+  }
+ h1 {
+    color: blue;
+    font-family: verdana;
+    text-align: center;
+    padding: 30px;
+  }
+ h2 {
+    font-family: courier;
+    text-align: center;
+  }
+  p {
+    color: red;
+    font-weight:bolder;
+    font-family: courier;
+    text-align: center;
+    padding: 20px;
+  }
+
+.navigationMenu {
+    background-color: rgb(124, 124, 201);
+    padding: 30px; 
+}
+.navigationItems {
+    font-family: verdana;
+    padding: 20px;
+    font-size: large;
+}
+
+.navigationItems:hover {
+    color:cornflowerblue;
+}
+.navigationItems:active{
+    color:darkcyan;
+}
+#icon {
+    width: 150px;
+    height: 150px ;
+}
+
+.weatherCard{
+    border-style:double rgb(56, 67, 106) ;
+    border: rgb(56, 67, 106);
+}
+button {
+    background-color: #786eeb;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+button:hover{
+    background-color: #a09ae4;
+}
+
+input {
+    padding: 10px 20px;
+    font-size: 16px;
+    margin: 4px 2px;
+}
+
+
