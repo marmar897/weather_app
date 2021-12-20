@@ -4,6 +4,7 @@ import { BrowserRouter, Route, Link, Switch} from 'react-router-dom';
 
 import WeatherCard from './WeatherCard';
 import SearchField from './SearchField';
+import Container from './Container';
 
 function Homepage(){
     return(
@@ -12,6 +13,8 @@ function Homepage(){
         <div >
             <SearchField/>
              {/* <WeatherCard/>  */}
+            {/* <Container/> */}
+             
        </div>
        </div>
          

@@ -8,6 +8,7 @@ import { BrowserRouter, Route, Link, Routes} from 'react-router-dom';
 //importing components
 import WeatherCard from "./components/WeatherCard";
 import Homepage from "./components/Home";
+import HourlyWeather from './components/HourlyWeather';
 
 function App() {
   return (
@@ -16,20 +17,18 @@ function App() {
 
       <div className="navigationMenu">
         <Link to="/" className="navigationItems">Home</Link>
-        {/* <Link to="/Likes" className="navigationItems">Likes</Link>
-        <Link to="/About" className="navigationItems">About</Link> */}
+        <Link to="/HourlyWeather" className="navigationItems">Hourly</Link>
+        {/* <Link to="/About" className="navigationItems">About</Link>  */}
 
       </div>
         
         <Routes>
           <Route exact path="/" element={<Homepage/>}/>
   
-{/* 
-          <Route path="/Likes">
-            <Likes/>
-          </Route>
 
-          <Route path="/About">
+          <Route exact path="/HourlyWeather" element={<HourlyWeather/>}/>
+
+          {/* <Route path="/About">
             <About />
           </Route> */}
 
